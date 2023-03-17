@@ -1,0 +1,462 @@
+/*global*/
+:root{
+    --dark-color: rgba(30, 48, 76, 70%);
+    --green-color: #33d1cc;
+    --red-coloe:#ff3150;
+    --yellow-color:#d8c481;
+    --color-text: rgb(240, 234, 234);
+    --textColor:rgb(20, 20, 20);
+    --gap: 16px;
+    --row-hight: 240px;
+    --padding-top-b: 90px;
+    --section-padding: 100px;
+
+
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    height: 500px;
+}
+/* btm START in landing*/
+.main-btn {  
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+    padding: 0.5rem 1rem;   
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    border: 2px solid transparent; /*avoid moving btn*/
+    transition: 0.4s;
+}
+.main-btn:hover {
+    color: var(--yellow-color);
+    background-color: transparent;
+    border: 2px solid var(--red-coloe);
+    
+}
+
+/*start nav bar*/
+.navbar{
+    background-color: var(--dark-color);    
+}
+.navbar .navbar-nav .nav-link{
+    color: white;
+}  
+.navbar .navbar-nav .nav-link.activ,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--green-color);
+}
+/*hamburgare lines*/
+.navbar .navbar-toggler { 
+   color: white; 
+   font-size: 20px;
+   border-color: transparent;
+}
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+/*end nav bar*/
+
+/*start landing*/
+.landing{
+    background-color: var(--dark-color);
+    min-height: calc(102vh - 90px); /*fix visibil color size */
+}
+.landing::before{
+    content: '';
+    background: url('https://images.pexels.com/photos/533923/pexels-photo-533923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    }
+.containerC {
+    padding-left: 50px;
+    padding-right: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/******Global components****Titel & line under********/
+.main-heading{
+    text-align: center;
+}
+.main-heading h2 {
+    font-weight: normal;
+    font-size: 30px;
+    position: relative;
+    margin-top: 6rem;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+}
+.main-heading h2::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: black;
+    bottom: -30px;
+    width: 120px;
+}
+.main-heading h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid black;
+    bottom: -36px;
+    background-color: rgb(255, 255, 255);
+}
+.main-heading p {
+    width: 550px;
+    margin: 0 auto 40px;
+    max-width: 2;
+    color: #868585;
+}
+/* slut Global */
+
+
+/***   Portfolio      **/
+.portfolio { 
+    padding-bottom: 50px;
+}
+.img-holder {
+    display: grid;
+    grid-template-columns: 300px 490px auto;
+    margin-top: 60px;
+}
+.imge-grid {   
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 15px;
+}
+.imge-grid > img {
+    width: 100%;
+    height: 100%;   
+}
+.move1 > img {
+    width: 100px;
+    border-radius: 50%;
+    border-width: 8px;
+    opacity: 80%;
+    position: relative;
+    animation: mymove1 20s infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes mymove1 {
+    0%   { left: 0px; top: 0px;}
+  25%  { left: 300px; top: 0px;}
+  50%  { left: 300px; top: 100px;}
+  75%  { left: 0px; top: 100px;}
+  100% { left: 0px; top: 0px;}
+  }
+
+picture img {
+  max-width: 100%; 
+  height: auto;
+}
+.go-back {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px; 
+}
+.go-back a {
+    padding: 10px;
+    text-decoration: none;   
+}
+.activ {
+    background-color: var(--dark-color);
+    font-weight: bold;
+    border-radius: 30px;
+    color: var(--color-text)!important;
+}
+.activ:hover{          
+    transform: scale(1.1);
+}
+
+
+ /***************Projekt meny**************/
+.meny{
+    min-height: 120vh; 
+    max-width: 100%; 
+    padding-top: 2em;
+    background-size:contain;    
+    background-position: center; 
+}
+.meny .one{
+    padding-bottom: 10em;
+    padding-top: 3em;
+} 
+.content {         /*flex box all elements(childs or cards) */
+    display: flex;
+    justify-content: center;
+    flex-direction: row;        
+    flex-wrap: wrap;              
+}
+.card{              /*each card design */
+    width: 20rem;
+    box-shadow: 0 7px 25px rgba(247, 13, 13, 0.5); /*shadow behaind each card*/
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    color: var(--textColor);
+}
+.card:hover{          
+    transform: scale(1.1);
+}
+.icon{
+    font-size: 8em;
+    text-align: center;
+}
+.icon img{      /*each card picture size*/
+    height: 20vh;
+}
+
+
+/*  Kontakt oss, grid table */
+.wrapper {
+    display: grid;
+    grid-template-columns: 300px 2fr ;          /*2 column 1size till 2*/
+    box-shadow: 0 0 5px 0 rgba(167, 10, 10, 0.2);
+    gap: 20px;                                  /*space between tow column*/                                          
+  }
+  .wrapper > * {
+    padding: 1em;                                 /*around area for all elements in 1em*/
+  }
+  
+  ul {
+    list-style: none;                           /*list information without dotts*/
+    padding: 0;
+  }
+  
+  .contacts {                                   /*-----1'st column--*/
+    background: var(--dark-color);             /*first column background in light-blue*/ 
+    color: #fff;  
+    padding: 4rem;                             /*white text*/
+  }
+  .form {                                     /*-----2'nd column--*/
+    background: #fff;         
+  }
+  form label {   
+    display: block;                           /*text labels are block*/
+  }
+  button,
+  input,
+  textarea {
+    padding: 1em; 
+  }
+  
+  button {
+    background: lightgrey;           /*(skicka) button is light-grey*/
+    width: 100%;                        /*is fulling the 2'nd column*/
+    border: 0;
+  }
+  button:hover, button:focus {            /*change till gold color when click*/
+    background: transparent;
+    outline: 0;
+  }
+  .contain {                            /*main view for hole box*/
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3em;
+  }
+ 
+  h3, ul {
+    margin: 0;
+  }
+  
+  h3 {
+    margin-bottom: 1rem;
+  }
+  
+  input:focus,                        /*change shadow color till gold whrn write*/
+  textarea:focus {
+    outline: 3px solid gold;
+  }
+  
+  input,
+  textarea,
+  button {
+    width: 100%;
+    border: 1px solid #000;
+  }
+  button:hover, button:focus {            /*change till gold color when click*/
+    background: gold;
+    outline: 0;
+  }
+
+
+/*start footer*/
+footer{
+    background-color: var(--dark-color);
+    padding-top: 10vh;
+}
+footer .copyright > span {
+    color: var(--green-color);
+}
+footer img{
+    height: 5rem;
+    padding-bottom: 2rem;
+}
+footer .followus ul svg {
+    width: 25px;
+    height: 25px;
+    justify-items: center;
+} 
+footer .linkedin {
+    background-color: #0077b5;
+}
+
+.telefon {
+    text-decoration: none;
+    color: white;
+    transition: 1 ease;
+    letter-spacing: 1px;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    margin-bottom: 6rem;
+        
+}
+
+       @keyframes example {
+        0%   { font-size: 110%;}
+        25%  {  }
+        50%  { font-size: 120%;}
+        75%  {   }
+        100% {   font-size: 110% }
+       
+      }
+
+
+      /*dark mode********************************/
+   @media (prefers-color-scheme:dark) {
+    body{
+        background-color: black;
+    }
+    :root{
+        --dark-color: rgba(13, 13, 14, 0.8);
+    }
+    .card{ 
+        background-color: rgba(81, 79, 79, 0.8);       /*each card design */
+        color: var(--color-text);
+        
+    }
+    .card img , .move1 , picture {
+        filter: brightness(0.8);
+    }
+    .main-heading > p {
+        color: rgb(198, 191, 191);
+    }
+    .main-heading h2::before {
+         background-color: azure;
+    }   
+    .imge-grid > img {
+        filter: brightness(0.7);
+    }
+    .imge-grid p { color: rgb(203, 201, 201);}
+    .main-heading h2 {
+        color: rgb(212, 208, 208); 
+    }
+        
+    .form , .contacts {  /*-----2'nd column--*/
+        background-color: rgba(35, 33, 33, 0.8);               
+     }
+    }
+
+  /* Responsiveness************************* */
+  @media (min-width: 768px) {
+    .img-holder {
+         grid-template-columns: 50% 50%;
+   }
+ }
+ @media (min-width: 1199px) {
+   .img-holder {
+       grid-template-columns: 300px 490px auto;
+     }
+  
+ }
+  @media (max-width: 768px)  {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+    .menu li{
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--gray);
+
+    }
+
+    .hamb{
+        display: none;
+    }
+       #social1 {
+        justify-content: space-around;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: auto;          /*2 column 1size till 2*/
+        box-shadow: 0 0 5px 0 rgba(247, 9, 9, 0.2);
+        width: 100%; 
+        padding: 0;                            /*space between tow column*/                                          
+      }
+
+    .img-holder {
+        padding: 56px 60px 50px 60px;
+        grid-template-columns: 100%;
+    }
+
+    .main-heading p {
+        width: 200px;
+        margin: 0 auto 40px;
+        max-width: 75%;
+        
+    }
+    .contain{
+        padding: 57px;
+        margin-left: 0;
+    margin-right: 0;
+    }
+    form{
+        padding:0;
+        width: 100%;
+    }
+    .contacts {
+        width: 100%;
+    }
+    @keyframes mymove1 {
+         0%   { left: 0px; top: 0px;}
+      25%  { left: 100px; top: 0px;}
+      50%  { left: 100px; top: 100px;}
+      75%  { left: 0px; top: 100px;}
+      100% { left: 0px; top: 0px;}
+      }
+}
+
