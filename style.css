@@ -232,6 +232,10 @@ picture img {
 .icon img{      /*each card picture size*/
     height: 20vh;
 }
+.p4 > img {
+    margin: 0 0 0 270px;
+    width: 1000px;
+  }
 
 
 /*  Kontakt oss, grid table */
@@ -391,6 +395,9 @@ footer .linkedin {
     .img-holder {
          grid-template-columns: 50% 50%;
    }
+   .p4 > img {
+    width: 550px; 
+  }
  }
  @media (min-width: 1199px) {
    .img-holder {
@@ -454,6 +461,9 @@ footer .linkedin {
     .contacts {
         width: 100%;
     }
+    .p4 > img {
+        width: 250px;
+      }
     @keyframes mymove1 {
          0%   { left: 0px; top: 0px;}
       25%  { left: 100px; top: 0px;}
