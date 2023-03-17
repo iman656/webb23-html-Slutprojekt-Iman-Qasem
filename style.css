@@ -189,9 +189,6 @@ body{
 .img-container .imge-box:hover .caption {  
     bottom: 0;
 }
-.container .imge-grid:hover .caption{
-    bottom: 0;
-}
 
 @keyframes mymove1 {
     0%   { left: 0px; top: 0px;}
