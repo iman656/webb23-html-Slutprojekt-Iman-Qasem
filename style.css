@@ -258,18 +258,18 @@ picture img {
   form label {   
     display: block;                           /*text labels are block*/
   }
-  button,
+  .button,
   input,
   textarea {
     padding: 1em; 
   }
   
-  button {
+  .button {
     background: lightgrey;           /*(skicka) button is light-grey*/
     width: 100%;                        /*is fulling the 2'nd column*/
     border: 0;
   }
-  button:hover, button:focus {            /*change till gold color when click*/
+  .button:hover, .button:focus {            /*change till gold color when click*/
     background: transparent;
     outline: 0;
   }
@@ -299,7 +299,7 @@ picture img {
     width: 100%;
     border: 1px solid #000;
   }
-  button:hover, button:focus {            /*change till gold color when click*/
+  .button:hover, .button:focus {            /*change till gold color when click*/
     background: gold;
     outline: 0;
   }
