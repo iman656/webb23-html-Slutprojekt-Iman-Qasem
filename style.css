@@ -139,7 +139,7 @@ body{
 }
 .img-holder {
     display: grid;
-    grid-template-columns: 300px 500px auto;
+    grid-template-columns: 250px 500px auto;
     margin-top: 60px;
 }
 .imge-grid {   
@@ -159,6 +159,9 @@ body{
     position: relative;
     animation: mymove1 20s infinite;
     animation-direction: alternate-reverse;
+}
+.proj {
+    width: 800px;
 }
 
 @keyframes mymove1 {
