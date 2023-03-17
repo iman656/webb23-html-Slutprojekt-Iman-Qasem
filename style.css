@@ -169,16 +169,13 @@ body{
     flex-wrap: wrap;
     margin-top: 20px;
 }
-.img-container .imge-box{
+.imge-box{
  flex-basis: 100%;
  overflow: hidden;
  position: relative;
 }
-/* start caption over picture*/
-.img-container .imge-box:hover .caption {  
-    bottom: 0;
-}
-.img-container .imge-box .caption {
+
+.caption  {
     position: absolute;
     left: 0;
     padding: 20px;
@@ -187,6 +184,13 @@ body{
     transition: 0.3s;
     bottom: -100%;
 
+}
+/* start caption over picture*/
+.img-container .imge-box:hover .caption {  
+    bottom: 0;
+}
+.container .imge-grid:hover .caption{
+    bottom: 0;
 }
 
 @keyframes mymove1 {
@@ -233,7 +237,7 @@ picture img {
     padding-bottom: 10em;
     padding-top: 3em;
 } 
-.content {         /*flex box all elements(childs or cards) */
+.content {         /*flex box */
     display: flex;
     justify-content: center;
     flex-direction: row;        
@@ -241,7 +245,7 @@ picture img {
 }
 .card{              /*each card design */
     width: 20rem;
-    box-shadow: 0 7px 25px rgba(247, 13, 13, 0.5); /*shadow behaind each card*/
+    box-shadow: 0 7px 25px rgba(247, 13, 13, 0.5); /*shadow each card*/
     border-radius: 10px;
     padding: 25px;
     margin: 15px;
@@ -257,9 +261,10 @@ picture img {
 .icon img{      /*each card picture size*/
     height: 20vh;
 }
-.p4 > img {
-    margin: 0 0 0 200px;
-    width: 1000px;
+.p4 > img {       /*mp4*/
+    
+    width: 500px;
+    
   }
 
 
@@ -268,27 +273,27 @@ picture img {
     display: grid;
     grid-template-columns: 300px 2fr ;          /*2 column 1size till 2*/
     box-shadow: 0 0 5px 0 rgba(167, 10, 10, 0.2);
-    gap: 20px;                                  /*space between tow column*/                                          
+    gap: 20px;                                                                          
   }
   .wrapper > * {
-    padding: 1em;                                 /*around area for all elements in 1em*/
+    padding: 1em;                                 /*around area in 1em*/
   }
   
   ul {
-    list-style: none;                           /*list information without dotts*/
+    list-style: none;                          
     padding: 0;
   }
   
   .contacts {                                   /*-----1'st column--*/
-    background: var(--dark-color);             /*first column background in light-blue*/ 
+    background: var(--dark-color);              
     color: #fff;  
-    padding: 4rem;                             /*white text*/
+    padding: 4rem;                          
   }
   .form {                                     /*-----2'nd column--*/
     background: #fff;         
   }
   form label {   
-    display: block;                           /*text labels are block*/
+    display: block;                           /*text block*/
   }
   .button,
   input,
@@ -298,10 +303,10 @@ picture img {
   
   .button {
     background: lightgrey;           /*(skicka) button is light-grey*/
-    width: 100%;                        /*is fulling the 2'nd column*/
+    width: 100%;                       
     border: 0;
   }
-  .button:hover, .button:focus {            /*change till gold color when click*/
+  .button:hover, .button:focus {            /*change till gold */
     background: transparent;
     outline: 0;
   }
@@ -320,7 +325,7 @@ picture img {
     margin-bottom: 1rem;
   }
   
-  input:focus,                        /*change shadow color till gold whrn write*/
+  input:focus,                        /*shadow color till gold :write*/
   textarea:focus {
     outline: 3px solid gold;
   }
@@ -331,7 +336,7 @@ picture img {
     width: 100%;
     border: 1px solid #000;
   }
-  .button:hover, .button:focus {            /*change till gold color when click*/
+  .button:hover, .button:focus {            /*change till gold :click*/
     background: gold;
     outline: 0;
   }
