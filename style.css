@@ -139,7 +139,7 @@ body{
 }
 .img-holder {
     display: grid;
-    grid-template-columns: 300px 490px auto;
+    grid-template-columns: 300px 500px auto;
     margin-top: 60px;
 }
 .imge-grid {   
