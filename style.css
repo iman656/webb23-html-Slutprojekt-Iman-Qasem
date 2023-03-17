@@ -135,7 +135,7 @@ body{
 
 /***   Portfolio      **/
 .portfolio { 
-    padding-bottom: 50px;
+    padding-bottom: 80px;
 }
 .img-holder {
     display: grid;
@@ -171,7 +171,24 @@ body{
 }
 .img-container .imge-box{
  flex-basis: 100%;
+ overflow: hidden;
+ position: relative;
 }
+/* start caption over picture*/
+.img-container .imge-box:hover .caption {  
+    bottom: 0;
+}
+.img-container .imge-box .caption {
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    background-color: var(--color-text);
+    transition: 0.3s;
+    bottom: -100%;
+
+}
+
 @keyframes mymove1 {
     0%   { left: 0px; top: 0px;}
   25%  { left: 150px; top: 0px;}
