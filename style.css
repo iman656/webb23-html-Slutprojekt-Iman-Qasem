@@ -152,18 +152,16 @@ body{
     height: 100%;   
 }
 .move1 > img {
-    width: 100px;
+    width: 140px;
     border-radius: 50%;
     border-width: 8px;
     opacity: 80%;
     position: relative;
     animation: mymove1 20s infinite;
     animation-direction: alternate-reverse;
-    margin-bottom: 120px;
+    margin-bottom: 110px;
 }
-.proj {
-    width: 800px;
-}
+
 .img-container{
     display: flex;
     flex-wrap: wrap;
@@ -173,6 +171,7 @@ body{
  flex-basis: 100%;
  overflow: hidden;
  position: relative;
+ width: 100%;
 }
 
 .caption  {
@@ -189,18 +188,18 @@ body{
 .img-container .imge-box:hover .caption {  
     bottom: 0;
 }
-
+/*Animation - pic*/
 @keyframes mymove1 {
     0%   { left: 0px; top: 0px;}
   25%  { left: 150px; top: 0px;}
-  50%  { left: 150px; top: 100px;}
-  75%  { left: 0px; top: 100px;}
+  50%  { left: 150px; top: 105px;}
+  75%  { left: 0px; top: 105px;}
   100% { left: 0px; top: 0px;}
   }
 
 picture img {
   max-width: 100%; 
-  height: auto;
+  
 }
 .go-back {
     display: flex;
@@ -371,7 +370,7 @@ footer .linkedin {
     margin-bottom: 6rem;
         
 }
-
+/*animation - telephone*/
        @keyframes example {
         0%   { font-size: 110%;}
         25%  {  }
@@ -395,7 +394,7 @@ footer .linkedin {
         color: var(--color-text);
         
     }
-    .card img , .move1 , picture {
+    .card img , .move1 , picture , .imge-box {
         filter: brightness(0.8);
     }
     .main-heading > p {
@@ -426,10 +425,11 @@ footer .linkedin {
     
     width: 550px; 
   }
-  .img-container .imge-box{
+  .img-container .imge-box > img{
     flex-basis: 50%;
    }
  }
+
  @media (min-width: 1199px) {  /*disktop*/
    .img-holder {
        grid-template-columns: 300px 490px auto;
@@ -475,6 +475,12 @@ footer .linkedin {
     .img-holder {
         padding: 56px 60px 50px 60px;
         grid-template-columns: 100%;
+        
+    }
+    .img-container > img {
+        
+       
+        width: 250px;
     }
 
     .main-heading p {
